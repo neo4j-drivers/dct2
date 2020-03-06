@@ -22,7 +22,7 @@
 from logging import getLogger, DEBUG, basicConfig
 from sys import stdout
 
-from dct2 import Bolt
+from dct2.bolt import Bolt
 
 
 log = getLogger(__name__)
