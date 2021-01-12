@@ -268,11 +268,11 @@ class SimpleUnpacker:
         # Dictionary
         elif 0xA0 <= marker <= 0xAF:
             return self._unpack_dict(size=(marker & 0x0F))
-        elif marker == 0xD4:
+        elif marker == 0xD8:
             return self._unpack_dict(size=self._read_u8())
-        elif marker == 0xD5:
+        elif marker == 0xD9:
             return self._unpack_dict(size=self._read_u16be())
-        elif marker == 0xD6:
+        elif marker == 0xDA:
             return self._unpack_dict(size=self._read_u32be())
 
         else:
